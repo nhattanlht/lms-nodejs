@@ -113,7 +113,7 @@ io.on('connection', (socket) => {
 
 export { io };
 
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`🚀 Server & WebSocket running on port ${port}`);
   connectDb();
 });

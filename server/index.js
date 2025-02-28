@@ -19,8 +19,6 @@ app.get("/", (req, res) => {
   res.send("Server is working");
 });
 
-// app.use("/uploads", express.static("uploads"));
-
 // importing routes
 import userRoutes from "./routes/user.js";
 import courseRoutes from "./routes/course.js";
@@ -30,7 +28,6 @@ import asssignmentRoutes from "./routes/assignment.js";
 import submissionRoutes from "./routes/submission.js";
 import messageRoutes from "./routes/message.js";
 import resourceRoutes from "./routes/resources.js";
-
 
 // using routes
 app.use("/api", userRoutes);
@@ -47,7 +44,7 @@ import http from "http"; // ✅ Import thêm http
 const server = http.createServer(app); // ✅ Tạo HTTP server từ app
 const io = new Server(server, {
   cors: {
-    origin: [process.env.frontendurl], // URL của client
+    origin: "*", // URL của client
     methods: ["GET", "POST"],
   },
 });

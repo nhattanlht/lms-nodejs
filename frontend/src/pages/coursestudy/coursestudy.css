@@ -1,0 +1,528 @@
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  grid-row: 3;
+  align-items: flex-start; /* Căn theo chiều dọc (top-align) */
+  text-align: left;
+
+}
+
+.content {
+  flex:3;
+  width: 100%; /* Khung chiếm toàn bộ chiều rộng của container cha */
+}
+
+.sidebar {
+  flex:1;
+  padding: 20px;
+  margin-right:20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: left;
+}
+.container hr {
+  height: 0; 
+  border: 0;
+  height: 2px;
+  background-color: #dacfdf; 
+}
+
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.course-description {
+  padding: 80px 0;
+  text-align: center;
+  min-height: 55vh;
+  grid-template-columns: 1fr; /* Mỗi phần tử chiếm toàn bộ chiều rộng */
+  grid-auto-rows: auto; /* Chiều cao tự động theo nội dung */
+  gap: 20px; /* Khoảng cách giữa các phần */
+}
+
+.course-header {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  grid-row: 2; 
+}
+
+
+.course-image {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  
+}
+
+.course-info {
+  text-align: left;
+  grid-row: 2; 
+
+}
+
+h2 {
+  font-size: 24px;
+  color: #8a4baf;
+}
+
+p {
+  font-size: 12px;
+  color: #0f0101;
+  margin: 5px 0;
+}
+
+ul li {
+  color: rgb(233, 233, 236);
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.info{
+  display: block;
+}
+.info a{
+  font-size: 16px;
+  color:purple;
+  text-decoration: none;
+}
+
+.course-title-bar {
+  background-color: #8a4baf;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  grid-row: 1; 
+}
+
+.course-title-bar h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.course-columns {
+  margin-left: 140px;
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-direction: column;  
+}
+.course-button {
+  margin-left: 120px;
+  display: flex;
+  justify-content: flex-start; /* Căn giữa theo chiều ngang */
+  align-items: flex-start;     /* Căn giữa theo chiều dọc */
+  height: 100%;
+  
+}
+
+.col {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 90%;
+  margin-bottom: 5px;
+  flex: 1 1 100%; 
+}
+
+
+.col h3 {
+  color: #8a4baf;
+  font-size: 22px;
+  margin-bottom: 15px;
+  word-wrap: break-word;  /* Cho phép từ dài xuống dòng */
+  white-space: normal;    /* Cho phép dòng mới khi cần thiết */
+}
+
+.col ul {
+  padding-left: 20px;
+}
+
+.col ul li {
+  margin-bottom: 10px;
+}
+
+.col ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+}
+
+.col ul li h4 {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+}
+
+.col ul li a:hover {
+  color: #8a4baf;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  .btn{
+    float:right;
+  }
+}
+
+
+.success-message {
+  color: #a72894; /* Màu chữ thành công */
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.file-item-container {
+  font-size:14px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom:5px;
+}
+.file-item-container:last-child {
+  border-bottom: none; /* Nếu sử dụng border để gạch dưới */
+  
+}
+.file-item{
+  display: flex;
+  justify-content: space-between; 
+  font-size:14px;
+  padding: 10px;
+}
+.file-item-icon{
+  display:flex;
+  align-items: right;
+}
+
+.file-item-container {
+  ul, ol,li {
+    list-style-type: none; /* Loại bỏ ký hiệu đầu dòng */
+    padding: 0;           /* Loại bỏ padding mặc định nếu cần */
+    margin: 0;            /* Loại bỏ margin mặc định nếu cần */
+  }
+  p{
+    font-size: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; 
+    color:black;
+    font-weight: normal;
+  }
+}
+ .time{
+  font-size: 12px;
+  color: gray;
+  text-align:left;
+  margin-top:1px;
+  margin-bottom:5px;
+}
+
+
+
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0e0202; /* Màu chữ tiêu đề modal */
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Form Label */
+.form-group label {
+  font-size: 14px;
+  color: #100000; /* Màu chữ label */
+  margin-bottom: 5px;
+  display: flex-start;
+}
+
+/* Form Inputs */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Button Styles */
+.upload-btn, .close-btn {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #af4ca8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  align-items: center;
+  text-align: center;
+  display:flex;
+  gap: 10px;
+}
+
+.upload-btn {
+  background-color: #8d2c79;
+}
+
+.close-btn:hover {
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+ 
+}
+.upload-btn p{
+  font-size:14px;
+  color:white;
+}
+
+.upload-btn:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Button Container */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+
+/* Edit and Delete buttons */
+.edit-btn, .delete-btn, .download-btn {
+  border: none;
+  padding: 4px 12px;
+  cursor: pointer;
+  float: center; 
+  background-color: transparent;
+  gap: 10px;
+  display:flex;
+  text-align:center;
+  align-items: center;
+
+}
+.edit-btn p{
+  font-size: 14px;
+  color:white;
+}
+
+
+.ricon{
+  font-size: 13px;
+  float:center;
+  color:#9b30b6;
+}
+
+/* Hover effect for Edit and Delete buttons */
+.edit-btn:hover, .delete-btn:hover, .download-btn:hover {
+  background-color: #f5f3f5; /* Màu tím đậm khi hover */
+}
+
+.user{
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.course-description-box {
+  border: 1px solid #ccc;  /* Khung viền */
+  padding: 15px;  /* Khoảng cách từ viền đến nội dung */
+  background-color: #f9f9f9;  /* Màu nền */
+  border-radius: 8px;  /* Bo góc */
+  margin: 20px 20px 20px 20px;  /* Khoảng cách từ các phần tử khác */
+}
+
+/**/
+.calendar {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px; /* Thêm khoảng cách giữa các calendar */
+}
+
+.calendar-header {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  background: #8a4baf;
+  color: white;
+  border-radius: 4px;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.weekday {
+  padding: 5px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.day {
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.day:hover {
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+/* Thay đổi class .current thành .due-date */
+.day.due-date {
+  background: #8a4baf;
+  color: white;
+  font-weight: bold;
+}
+
+/* Thêm tooltip khi hover vào ngày có deadline */
+.day.due-date:hover {
+  background: #6a2e8c;
+}
+
+/* Điều chỉnh chiều rộng sidebar nếu cần */
+.sidebar {
+  width: 300px; /* Tăng chiều rộng sidebar nếu cần */
+  overflow-y: auto; /* Cho phép cuộn nếu nội dung quá dài */
+}
+
+/* Custom tooltip styling */
+/* .day[title] {
+  position: relative;
+} */
+
+.day[data-title] {
+  position: relative;
+}
+.deadline-count {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ff4444;
+  color: white;
+  font-size: 10px;
+  padding: 2px 4px;
+  border-radius: 10px;
+  font-weight: normal;
+}
+
+.day[data-title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: pre;
+  z-index: 1000;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+  color: white;
+}

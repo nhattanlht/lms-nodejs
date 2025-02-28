@@ -1,0 +1,62 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%; /* Đảm bảo các input chiếm toàn bộ chiều rộng của modal */
+  display: flex;
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.form-group label {
+  width: 30%; /* Đặt chiều rộng cho label */
+  margin-right: 10px; /* Khoảng cách giữa label và input */
+  text-align: left; /* Căn trái label */
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 70%; /* Đặt chiều rộng cho input */
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center; /* Căn giữa các nút */
+  gap: 10px; /* Khoảng cách giữa các nút */
+  margin-top: 10px; /* Khoảng cách phía trên các nút */
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #8a4baf;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #6a2e8c;
+}

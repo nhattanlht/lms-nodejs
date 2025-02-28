@@ -1,0 +1,385 @@
+/* General header styling */
+.header {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-action{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Cải thiện kiểu dáng của dropdown thông báo */
+.notification-dropdown {
+  font-size: 14px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Thêm bóng cho dropdown */
+  border-radius: 8px; /* Góc bo tròn */
+  z-index: 1;
+  width: 250px; /* Tăng chiều rộng của dropdown */
+  padding: 12px 18px; /* Tăng padding để nội dung không bị bó hẹp */
+  max-height: 350px; /* Đặt chiều cao tối đa cho dropdown */
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.noti-icon:hover + .notification-dropdown,
+.notification-dropdown:hover {
+  opacity: 1;
+  visibility: visible;
+}
+/* Cải thiện giao diện từng item thông báo */
+.notification-dropdown .item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #ccc; /* Tạo thanh phân cách giữa các mục */
+
+}
+.notification-dropdown .item:last-child {
+  border-bottom: none; /* Loại bỏ thanh phân cách cho mục cuối cùng */
+}
+
+.notification-dropdown .item:hover {
+  background-color: #f4f4f4; /* Màu nền khi hover vào item */
+}
+
+/* Thêm biểu tượng thông báo và màu sắc cho chuông khi có thông báo mới */
+.noti {
+  position: relative;
+  color: #8a4baf;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 29px;
+  margin-right: 20px;
+  z-index: 2;
+}
+
+.unread-notifications{
+  position: absolute;
+  background-color: red;
+  color: white;
+  font-size: small;
+  padding: 1px 4px;
+  top: 50%;
+  left: 50%;
+}
+
+.noti .read {
+  color: #333; /* Màu chữ thông báo đã đọc */
+  font-weight: normal;
+}
+
+.notification-icon {
+  
+  font-size: 24px; /* Tăng kích thước biểu tượng chuông */
+  color: #6a2e8c; /* Màu chuông bình thường */
+  transition: color 0.3s ease;
+}
+
+.notification-icon:hover {
+  color: #8854a5; /* Màu chuông khi hover */
+}
+
+/* Thêm biểu tượng chuông đỏ khi có thông báo mới */
+.notification-icon.new-notification {
+  color: red; /* Màu chuông đỏ khi có thông báo mới */
+}
+
+.notification-dropdown .item.new-notification {
+  background-color: #ffe6e6; /* Màu nền khi có thông báo mới */
+}
+
+.notification-dropdown .item.new-notification:hover {
+  background-color: #ffcccc; /* Màu nền khi hover vào thông báo mới */
+}
+
+
+/* Logo styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8a4baf;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #6c399f;
+}
+
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #8a4baf; /* Change to primary color on hover */
+}
+
+/* Actions container styling */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Dropdown button styling */
+.dropdown-button {
+  background: none;
+  border: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  transition: color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  color: #8a4baf;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px 0;
+  min-width: 150px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10;
+}
+
+.dropdown-button:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-item {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #fafafa;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  color: #8a4baf;
+}
+
+/* Login link styling */
+.login-link {
+  text-decoration: none;
+  color: #8a4baf;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #6c399f;
+}
+
+/* Notification bell styling */
+.notification {
+  position: relative;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.notification::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.search-bar form:focus-within {
+  border-color: #8a4baf;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 200px;
+  border-radius: 12px;
+}
+
+.search-bar button {
+  background-color: white;
+  border: none;
+  color: #8a4baf;
+  margin-left: 5px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  color: #6c399f;
+  background-color: #fafafa;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  background-color: #8a4baf;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    display: none;
+  }
+
+  .open{
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .search-bar form {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .search-bar button {
+    margin-left: 0;
+    border-radius: 20px;
+    padding: 8px;
+  }
+
+  .dropdown{
+    position: relative;
+  }
+
+  .notification,
+  .dropdown-button {
+    font-size: 1.4rem;
+  }
+
+  .dropdown-menu {
+    right: 10px;
+    top: 40px;
+    min-width: 120px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-adjustment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.iconM{
+  color:#8a4baf;
+  margin-left:10px;
+  margin-right:15px;
+  font-size:10px;
+  text-align:center;
+}

@@ -1,0 +1,71 @@
+.assignment-details {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.assignment-details .assignment-info {
+  margin-bottom: 20px;
+}
+
+.assignment-details h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.assignment-details p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.assignment-details a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8a4baf;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Cách đều các nút */
+  gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.common_ass-btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #8a4baf;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.common_ass-btn:hover {
+  background-color: #6a2e8c;
+}
+
+.button-group.delete_ass-btn {
+  background-color: #e24a4a;
+  padding: 10px 50px;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.button-group.delete_ass-btn:hover {
+  background-color: #bd3535;
+}

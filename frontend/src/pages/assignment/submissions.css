@@ -1,0 +1,89 @@
+.submissions {
+  margin-top: 20px;
+}
+
+.submissions h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.submitted-status {
+  color: green;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.not-submitted-status {
+  color: red;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.tick-icon {
+  margin-left: 5px;
+}
+
+.submissions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.submissions li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.submissions li p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.submissions li a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #8a4baf;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.submissions li a:hover {
+  background-color: #6a2e8c;
+}
+
+.common-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8a4baf;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.common-btn:hover {
+  background-color: #6a2e8c;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="file"] {
+  padding: 5px;
+}

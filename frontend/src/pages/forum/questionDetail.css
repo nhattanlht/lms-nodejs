@@ -1,0 +1,117 @@
+.question-container{
+    max-width: 700px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 0 0.5rem;
+}
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #8a4baf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+  }
+  
+  .back-button:hover {
+    background-color: #7b3e9f;
+  }
+  
+  .created-at{
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #444444;
+  }
+  .question-card {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 2rem;
+  }
+  
+  .question-card .username {
+    font-weight: bold;
+    color: #8a4baf;
+    margin-bottom: 5px;
+  }
+  
+  .question-card .content {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+    margin: 0.5rem 0 1rem 0;
+  }
+  
+  .answers-list {
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .answer-card {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0 1rem 1rem;
+  }
+  
+  .answer-card .username {
+    font-weight: bold;
+    color: #8a4baf;
+    margin-bottom: 5px;
+  }
+  
+  .answer-card .content {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    padding-bottom: 10px;
+    font-weight: normal;
+  }
+  
+  .add-answer-form {
+    border-radius: 12px;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ddd;
+  }
+  
+  .add-answer-form textarea {
+    width: 100%;
+    /* border: 1px solid #ddd; */
+    border: none;
+    resize: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Popins', sans-serif;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  .post-button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .add-answer-form .post-button {
+    padding: 12px;
+    background-color: white;
+    color: #8a4baf;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 0;
+  }
+  
+  .add-answer-form .post-button:hover {
+    color: #6c399f;
+  }

@@ -1,0 +1,121 @@
+.user-table-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.user-table-container .top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.user-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #8a4baf;
+  color: white;
+}
+
+.user-table thead {
+  background-color: #8a4baf;
+  color: white;
+}
+
+.user-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.user-table tbody td {
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.user-table input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #8a4baf;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 0;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #723d94;
+}
+
+.modal-content select {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .user-table-container {
+    padding: 10px;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 8px 12px;
+  }
+
+  .user-table input[type="checkbox"] {
+    transform: scale(1);
+  }
+
+  .edit-button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .delete-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
